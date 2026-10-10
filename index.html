@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Hola Mundo moderno en HTML, CSS y JavaScript vanilla, desplegado automáticamente en GitHub Pages."
+    />
+    <meta name="theme-color" content="#0f1720" />
+    <title>¡Hola, Mundo!</title>
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%236366f1'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='system-ui'%3EH%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Aplica el tema antes del primer pintado para evitar el flash (FOUC). -->
+    <script>
+      document.documentElement.dataset.theme =
+        localStorage.getItem("theme") ||
+        (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+    </script>
+
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <div class="bg" aria-hidden="true">
+      <span class="bg__orb bg__orb--one"></span>
+      <span class="bg__orb bg__orb--two"></span>
+    </div>
+
+    <main class="hero">
+      <article class="card">
+        <header class="card__header">
+          <p class="eyebrow" id="greeting">Bienvenido</p>
+          <button
+            id="theme-toggle"
+            class="theme-toggle"
+            type="button"
+            aria-label="Cambiar a modo oscuro"
+          >
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="12" cy="12" r="4" />
+              <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
+          </button>
+        </header>
+
+        <h1 class="card__title">¡Hola, <span class="gradient-text">Mundo</span>!</h1>
+
+        <p class="card__subtitle">
+          Una página estática construida con <strong>HTML</strong>,
+          <strong>CSS</strong> y <strong>JavaScript vanilla</strong>, publicada
+          automáticamente en <strong>GitHub&nbsp;Pages</strong> con cada
+          <code>push</code> a <code>main</code>.
+        </p>
+
+        <ul class="stack" aria-label="Tecnologías utilizadas">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript ES6+</li>
+          <li>GitHub Actions</li>
+        </ul>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <p>
+        Hecho con código vanilla · <span id="year">2026</span> ·
+        <a
+          href="https://github.com/GregoriEJimenezDev/Hellowold"
+          rel="noopener noreferrer"
+          >Ver código en GitHub</a
+        >
+      </p>
+    </footer>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
